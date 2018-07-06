@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="itemPeopleViewModel"
+            type="com.kt.vvhoan.peoplekt.viewmodel.ItemPeopleViewModel"/>
+    </data>
+    <RelativeLayout
+        android:id="@+id/item_people"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/label_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{itemPeopleViewModel.location}"
+            android:textColor="@android:color/primary_text_light"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="Mr Gary Allens"
+            tools:ignore="UnknownId"
+            />
+
+        <TextView
+            android:id="@+id/label_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/label_name"
+            android:text="@{itemPeopleViewModel.login}"
+            android:textColor="@android:color/secondary_text_light"
+            android:textSize="14sp"
+            tools:text="0124534-343-3533"/>
+
+        <TextView
+            android:id="@+id/label_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/label_phone"
+            android:text="@{itemPeopleViewModel.picture}"
+            android:textColor="@android:color/secondary_text_light"
+            android:textSize="14sp"
+            tools:text="gary.allens@yahoo.com"/>
+    </RelativeLayout>
+
+</layout>
